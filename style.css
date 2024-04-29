@@ -116,6 +116,7 @@ body {
 }
 
 .left_buttton:hover {
+  cursor: pointer;
   background-color: #1a61c7;
   color: #fff;
 }
@@ -153,8 +154,8 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 110%;
-  height: 110%;
+  width: 100%;
+  height: 100%;
   transition: all 0.1s ease;
 }
 .mouse-parallax-fog-1 {
@@ -315,7 +316,8 @@ body {
   }
 }
 
-/*Адаптив*/
+/*Адаптив Бонус 
+за регистрацию */
 
 @media (max-width: 1200px) {
   .two-col-block {
@@ -333,7 +335,7 @@ body {
   .right-blockBook {
     width: 318px;
     left: -36px;
-    top: 48px;
+    top: 55px;
   }
   .elips_one img {
     bottom: -55px;
@@ -393,7 +395,7 @@ body {
     padding: 12px 0px;
   }
   .two-col-block {
-    padding: 44px 0px 318px 0px;
+    padding: 44px 0px 380px 0px;
   }
   .present-box {
     text-align: center;
@@ -428,6 +430,9 @@ body {
 }
 
 @media (max-width: 640px) {
+  .two-col-block {
+    padding: 44px 0px 318px 0px;
+  }
   .heading {
     font-size: 28px;
     line-height: 25.2px;
@@ -437,7 +442,7 @@ body {
     line-height: 17.6px;
   }
   .marquee__content {
-    width: 400%;
+    width: 500%;
   }
   .marquee__cont {
     width: 400%;
@@ -482,4 +487,177 @@ body {
   .heading {
     display: none;
   }
+}
+
+/*Мастер-класс проведут:*/
+
+.teacher {
+  max-width: 1166px;
+  margin: 0 auto;
+  color: white;
+  padding: 60px 10px 60px 10px;
+  display: flex;
+  justify-content: end;
+}
+
+.teacher_cardImg {
+  max-width: 385px;
+}
+.teacher__desc {
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 72px;
+  margin-bottom: 60px;
+}
+.teacher_cardbody {
+  display: flex;
+  justify-content: space-between;
+}
+.teach_card {
+  max-width: 385px;
+}
+.teach_cardDesc {
+  font-size: 34px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.teach_cardline {
+  margin-bottom: 20px;
+}
+.teach_cardtext {
+  list-style-type: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18.4px;
+  margin-bottom: 20px;
+  height: 148px;
+}
+.teach_cardItem {
+  max-width: 327px;
+  margin-bottom: 10px;
+}
+
+.teach_cardItem {
+  list-style-image: url(https://static.tildacdn.com/tild3633-6638-4439-b439-366131373138/Ellipse_5976.svg);
+  list-style-type: "your icon";
+  padding-inline-start: 1ch;
+  margin-left: 10px;
+  background-repeat: no-repeat;
+  background-position: 10% 10%;
+}
+
+@media (max-width: 1200px) {
+  .teacher__desc {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+  .teach_cardDesc {
+    font-size: 30px;
+  }
+
+  .teach_card {
+    margin-right: 20px;
+    max-width: 300px;
+  }
+
+  .teacher_cardImg {
+    max-width: 298px;
+  }
+  .teach_cardtext {
+    height: 178px;
+  }
+}
+
+@media (max-width: 960px) {
+  .teach_card {
+    margin-right: 0px;
+  }
+  .teacher__desc {
+    font-size: 45px;
+  }
+  .card_mobilTeacher {
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .teacher__desc {
+    max-width: 277px;
+    font-size: 36px;
+    margin-bottom: 60px;
+    line-height: 36px;
+  }
+  .teacher_cardbody {
+    flex-direction: column;
+  }
+  .card_mobilTeacher {
+    margin-right: 0px;
+  }
+  .teach_cardDesc {
+    font-size: 27px;
+  }
+  .teach_cardtext {
+    height: 184px;
+    max-width: 281px;
+  }
+  .teacher_cardImg {
+    max-width: 300px;
+    margin-bottom: 60px;
+  }
+  .teach_textMobile {
+    height: 126px;
+  }
+  .teacher {
+    justify-content: start;
+    padding: 60px 10px 0px 10px;
+  }
+}
+
+/*РЕГИСТРАЦИЯ*/
+.registration {
+  background-color: #d9d9d9;
+}
+.registration_container {
+  max-width: 1166px;
+  margin: 0 auto;
+  padding: 130px 10px 100px 10px;
+}
+.registration_body {
+  display: flex;
+  justify-content: space-between;
+}
+.registration_text {
+}
+.registration_desc {
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 66px;
+}
+.registration_subdesc {
+  color: #383838;
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 29.7px;
+}
+.registration_btn {
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 20px 35px;
+  border-radius: 4px;
+  background-color: #e1fe8e;
+  border: 1px #383838 solid;
+  color: #383838;
+}
+.registration_btn:hover {
+  background-color: #1a61c7;
+  color: white;
+}
+.registration_img {
+}
+.registration_book {
+}
+.circle_one {
+}
+.circle_to {
 }
