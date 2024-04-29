@@ -1,0 +1,485 @@
+@font-face {
+  font-family: "SF UI Display";
+  src: url("fonts/sf_ui_display_regular.eot");
+  src: url("fonts/sf_ui_display_regular.eot?#iefix") format("embedded-opentype"),
+    url("fonts/sf_ui_display_regular.woff2") format("woff2"),
+    url("fonts/sf_ui_display_regular.woff") format("woff"),
+    url("fonts/sf_ui_display_regular.ttf") format("truetype"),
+    url("fonts/sf_ui_display_regular.svg#sf_ui_display_regular") format("svg");
+}
+
+:root {
+  --main-dark-color: #383838;
+  --accent-color: #e1fe8e;
+  --hover-color: #1a61c7;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+body {
+  text-decoration: none;
+  font-family: "SF UI Display", Arial, sans-serif;
+  background-color: var(--main-dark-color);
+  color: var(--main-dark-color);
+}
+button {
+  color: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0;
+  border: transparent;
+}
+.container {
+  max-width: 1146px;
+  margin: 0 auto;
+}
+
+.contain_rowgo {
+  background-color: #d9d9d9;
+}
+.rowgo {
+  height: 60px;
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+.container__poluch {
+  border-radius: 12px;
+  background-color: #e1fe8e;
+  font-family: "SF UI Display", Arial, sans-serif;
+  max-width: 1380px;
+  padding: 0px 10px;
+  margin: 0 auto;
+  background-position: right;
+  background-size: 710px;
+  background-repeat: no-repeat;
+  background-image: url(https://static.tildacdn.com/tild3537-6366-4164-a265-346437656236/Group_2131328595.png);
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.two-col-block {
+  padding: 75px 75px 76px 106px;
+  margin: auto;
+  border-radius: 12px;
+}
+.two-col-block__content {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.heading {
+  margin-bottom: 30px;
+  max-width: 294px;
+  color: #191919;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 64.8px;
+}
+.heading_mobile {
+  display: none;
+}
+.descr {
+  font-size: 21px;
+  line-height: 1.35;
+  color: #191919;
+  margin-bottom: 20px;
+}
+.present-box {
+  font-size: 27px;
+  font-weight: 400;
+  line-height: 29.7px;
+  max-width: 289px;
+  margin-bottom: 50px;
+}
+
+.left_buttton {
+  color: #e1fe8e;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 20px 35px;
+  background-color: #191919;
+  border-radius: 4px;
+  max-width: 198px;
+}
+
+.left_buttton:hover {
+  background-color: #1a61c7;
+  color: #fff;
+}
+
+.right-block {
+  width: 379px;
+  position: relative;
+}
+.right-blockBook {
+  position: absolute;
+  width: 438px;
+  left: -129px;
+}
+
+/*Анимация книги*/
+.box {
+  align-self: flex-end;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+
+  margin: 0 auto 0 auto;
+  transform-origin: bottom;
+}
+.bounce-1 {
+  animation-name: bounce-1;
+  animation-timing-function: linear;
+}
+
+/*Паралакс круги*/
+
+.mouse-parallax-bg,
+.mouse-parallax-fog-1,
+.mouse-parallax-fog-2 {
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 110%;
+  height: 110%;
+  transition: all 0.1s ease;
+}
+.mouse-parallax-fog-1 {
+  left: -10%;
+}
+
+@keyframes bounce-1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-29px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.elips_one img {
+  bottom: -111px;
+  left: -75px;
+  width: 133.17px;
+  height: 133.17px;
+  transform: rotate(-49.69deg);
+  transform-origin: 0 0;
+  position: absolute;
+  border-radius: 9999px;
+
+  backdrop-filter: blur(11.56px);
+}
+.elips_to img {
+  width: 88px;
+  top: 15px;
+  left: 40px;
+  height: 83px;
+  transform: rotate(-49.69deg);
+  transform-origin: 0 0;
+  position: absolute;
+  border-radius: 9999px;
+
+  backdrop-filter: blur(11.56px);
+}
+
+/*Бегущие строки*/
+.marquee {
+  margin: 0 auto;
+
+  padding: 20px 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+.marquee:before,
+.marquee:after {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 30px;
+  content: "";
+  z-index: 1;
+}
+.marquee:before {
+  left: 0;
+}
+.marquee:after {
+  right: 0;
+}
+.marquee__content {
+  width: 300%;
+  display: flex;
+  color: #383838;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25.2px;
+  animation: marquee 50s linear infinite forwards;
+}
+/* .marquee__content:hover {
+  animation-play-state: paused;
+} */
+.list-inline {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  width: 70.33%;
+  /* reset list */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.list-inline li {
+  margin-right: 20px;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-66.6%);
+  }
+}
+
+/*нижняя бегущая строка*/
+.marq {
+  margin: 0 auto;
+
+  padding: 20px 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+.marq:before,
+.marq:after {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 30px;
+  content: "";
+  z-index: 1;
+}
+.marq:before {
+  left: 0;
+}
+.marq:after {
+  right: 0;
+}
+.marquee__cont {
+  width: 300%;
+  display: flex;
+  color: #383838;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25.2px;
+  animation: marq 90s linear infinite forwards;
+}
+/* .marquee__content:hover {
+  animation-play-state: paused;
+} */
+.list-inl {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  width: 90.33%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.list-inl li {
+  margin-right: 20px;
+}
+@keyframes marq {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/*Адаптив*/
+
+@media (max-width: 1200px) {
+  .two-col-block {
+    padding: 80px 10px 57px 25px;
+  }
+  .heading {
+    font-size: 60px;
+    margin-bottom: 20px;
+  }
+  .present-box {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  .right-blockBook {
+    width: 318px;
+    left: -36px;
+    top: 48px;
+  }
+  .elips_one img {
+    bottom: -55px;
+    left: -6px;
+    width: 104.16999999999999px;
+    height: 104.17px;
+  }
+  .elips_to img {
+    width: 60px;
+    top: 15px;
+    left: 99px;
+    height: 60px;
+  }
+  .container__poluch {
+    background-position: right bottom;
+    background-size: 494px;
+  }
+}
+
+@media (max-width: 960px) {
+  .container__poluch {
+    margin: 0px 10px;
+  }
+
+  .two-col-block__content {
+    flex-direction: column;
+
+    align-items: center;
+  }
+  .heading {
+    font-size: 34px;
+    margin-top: 0px;
+    max-width: 300px;
+    text-align: center;
+    line-height: 39px;
+  }
+
+  .present-box {
+    margin-left: 0;
+    border-radius: 50px;
+    width: 300px;
+
+    margin-bottom: 70px;
+  }
+  .right-block {
+    margin: 0 auto;
+  }
+
+  .list-inline li {
+    font-size: 16px;
+  }
+  .list-inl li {
+    font-size: 16px;
+  }
+  .marquee,
+  .marq {
+    padding: 12px 0px;
+  }
+  .two-col-block {
+    padding: 44px 0px 318px 0px;
+  }
+  .present-box {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .left__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .right-blockBook {
+    width: 288px;
+    left: 20px;
+    top: 104px;
+  }
+  .elips_to img {
+    width: 60px;
+    top: 98px;
+    left: 138px;
+    height: 60px;
+  }
+
+  .elips_one img {
+    bottom: -389px;
+    left: 61px;
+    width: 91.16999999999999px;
+    height: 91.17px;
+  }
+}
+
+@media (max-width: 640px) {
+  .heading {
+    font-size: 28px;
+    line-height: 25.2px;
+  }
+  .present-box {
+    font-size: 16px;
+    line-height: 17.6px;
+  }
+  .marquee__content {
+    width: 400%;
+  }
+  .marquee__cont {
+    width: 400%;
+  }
+  .right-blockBook {
+    width: 199px;
+    left: 35px;
+    top: 92px;
+  }
+  .elips_to img {
+    width: 38px;
+    top: 90px;
+    left: 116px;
+    height: 38px;
+  }
+
+  .elips_one img {
+    bottom: -311px;
+    left: 79px;
+    width: 64.17px;
+    height: 64.17px;
+  }
+  .container__poluch {
+    background-image: none;
+  }
+
+  .two-col-block {
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position: 39% 100%;
+    background-image: url(https://static.tildacdn.com/tild3138-3839-4633-b030-643964663735/noroot.png);
+  }
+  .heading_mobile {
+    display: block;
+    font-size: 28px;
+    line-height: 25.2px;
+    font-weight: 400;
+    max-width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .heading {
+    display: none;
+  }
+}
